@@ -24,14 +24,14 @@ export default class ComForm extends Component {
     async publish() {
         let user = await AsyncStorage.getItem('user')
         user = JSON.parse(user)
-        fetch(`https://myicetool.bsy.ovh/api/cascades/${this.state.cascade.id}/commentaire`, {
+        fetch(`https://myicetool.bsy.ovh/api/cascades/${this.state.cascade.id}/comments`, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 contenu: this.state.commentaire,
-                user: user.id
+                user_id: user.id
             })
         }).then(res => res.json())
         .then(data => alert(JSON.stringify(data)))
