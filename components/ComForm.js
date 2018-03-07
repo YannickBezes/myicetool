@@ -13,12 +13,7 @@ export default class ComForm extends Component {
 
     constructor(props) {
         super(props)
-        this.state = { commentaire: '', user: {}, cascade: this.props.cascade }
-        AsyncStorage.getItem('user').then(user => {
-            if (user) {
-                this.setState({ user: JSON.parse(user) })
-            }
-        })
+        this.state = { commentaire: '', cascade: this.props.cascade }
     }
 
     disconnect() {
@@ -26,7 +21,9 @@ export default class ComForm extends Component {
         this.props.navigation.goBack()
     }
 
-    publish() {
+    async publish() {
+        let user = await AsyncStorage.getItem('user')
+        user = JSON.parse(user)
         fetch(`https://myicetool.bsy.ovh/api/cascades/${this.state.cascade.id}/commentaire`, {
             method: 'post',
             headers: {
@@ -34,7 +31,7 @@ export default class ComForm extends Component {
             },
             body: JSON.stringify({
                 contenu: this.state.commentaire,
-                user: this.state.user.id
+                user: user.id
             })
         }).then(res => res.json())
         .then(data => alert(JSON.stringify(data)))
