@@ -1,0 +1,208 @@
+<svg width="56" height="56" viewBox="0 0 56 56" version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>masks</title>
+	<g id="Canvas" transform="translate(-30 -172)">
+		<g id="masks">
+			<!-- <g id="samsung">
+				<g id="Mask">
+					<use xlink:href="#path0_fill" transform="translate(318 172)"/>
+				</g>
+				<mask id="mask0_outline" mask-type="alpha">
+					<g id="Mask">
+						<use xlink:href="#path0_fill" transform="translate(318 172)" fill="#FFFFFF"/>
+					</g>
+				</mask>
+				<g id="Background" mask="url(#mask0_outline)">
+					<path d="M 304 158L 388 158L 388 242L 304 242L 304 158Z" fill="#E61919"/>
+					<g id="background">
+						<use xlink:href="#path1_fill" transform="translate(304 158)" fill="#4F4F4F"/>
+					</g>
+				</g>
+				<g id="Foreground" mask="url(#mask0_outline)">
+					<g id="mountains">
+						<g id="Vector">
+							<use xlink:href="#path2_fill" transform="translate(348.316 198.494)" fill="#2864F0"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path3_fill" transform="translate(354.984 198.494)" fill="#0053BF"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path4_fill" transform="translate(325.778 192.149)" fill="#69A8FF"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path5_fill" transform="translate(339.804 192.149)" fill="#3389FF"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path6_fill" transform="translate(332.95 182.225)" fill="#E6F1FF"/>
+						</g>
+						<g id="Group">
+							<g id="Vector">
+								<use xlink:href="#path7_fill" transform="translate(339.805 182.225)" fill="#BFE1FF"/>
+							</g>
+							<g id="Vector">
+								<use xlink:href="#path8_fill" transform="translate(350.105 191.94)" fill="#BFE1FF"/>
+							</g>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path9_fill" transform="translate(354.984 191.94)" fill="#A3D4FF"/>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="microsoft">
+				<g id="Mask">
+					<use xlink:href="#path10_fill" transform="translate(222 172)"/>
+				</g>
+				<mask id="mask1_outline" mask-type="alpha">
+					<g id="Mask">
+						<use xlink:href="#path10_fill" transform="translate(222 172)" fill="#FFFFFF"/>
+					</g>
+				</mask>
+				<g id="Background" mask="url(#mask1_outline)">
+					<path d="M 208 158L 292 158L 292 242L 208 242L 208 158Z" fill="#E61919"/>
+					<g id="background">
+						<use xlink:href="#path1_fill" transform="translate(208 158)" fill="#4F4F4F"/>
+					</g>
+				</g>
+				<g id="Foreground" mask="url(#mask1_outline)">
+					<g id="mountains">
+						<g id="Vector">
+							<use xlink:href="#path2_fill" transform="translate(252.316 198.494)" fill="#2864F0"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path3_fill" transform="translate(258.984 198.494)" fill="#0053BF"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path4_fill" transform="translate(229.778 192.149)" fill="#69A8FF"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path5_fill" transform="translate(243.804 192.149)" fill="#3389FF"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path6_fill" transform="translate(236.95 182.225)" fill="#E6F1FF"/>
+						</g>
+						<g id="Group">
+							<g id="Vector">
+								<use xlink:href="#path7_fill" transform="translate(243.805 182.225)" fill="#BFE1FF"/>
+							</g>
+							<g id="Vector">
+								<use xlink:href="#path8_fill" transform="translate(254.105 191.94)" fill="#BFE1FF"/>
+							</g>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path9_fill" transform="translate(258.984 191.94)" fill="#A3D4FF"/>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="apple">
+				<g id="Mask">
+					<use xlink:href="#path11_fill" transform="translate(126 172)"/>
+				</g>
+				<mask id="mask2_outline" mask-type="alpha">
+					<g id="Mask">
+						<use xlink:href="#path11_fill" transform="translate(126 172)" fill="#FFFFFF"/>
+					</g>
+				</mask>
+				<g id="Background" mask="url(#mask2_outline)">
+					<path d="M 112 158L 196 158L 196 242L 112 242L 112 158Z" fill="#E61919"/>
+					<g id="background">
+						<use xlink:href="#path1_fill" transform="translate(112 158)" fill="#4F4F4F"/>
+					</g>
+				</g>
+				<g id="Foreground" mask="url(#mask2_outline)">
+					<g id="mountains">
+						<g id="Vector">
+							<use xlink:href="#path2_fill" transform="translate(156.316 198.494)" fill="#2864F0"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path3_fill" transform="translate(162.984 198.494)" fill="#0053BF"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path4_fill" transform="translate(133.778 192.149)" fill="#69A8FF"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path5_fill" transform="translate(147.804 192.149)" fill="#3389FF"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path6_fill" transform="translate(140.95 182.225)" fill="#E6F1FF"/>
+						</g>
+						<g id="Group">
+							<g id="Vector">
+								<use xlink:href="#path7_fill" transform="translate(147.805 182.225)" fill="#BFE1FF"/>
+							</g>
+							<g id="Vector">
+								<use xlink:href="#path8_fill" transform="translate(158.105 191.94)" fill="#BFE1FF"/>
+							</g>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path9_fill" transform="translate(162.984 191.94)" fill="#A3D4FF"/>
+						</g>
+					</g>
+				</g>
+			</g> -->
+			<g id="google">
+				<g id="Mask">
+					<use xlink:href="#path12_fill" transform="translate(30 172)"/>
+				</g>
+				<mask id="mask3_outline" mask-type="alpha">
+					<g id="Mask">
+						<use xlink:href="#path12_fill" transform="translate(30 172)" fill="#FFFFFF"/>
+					</g>
+				</mask>
+				<g id="Background" mask="url(#mask3_outline)">
+					<path d="M 16 158L 100 158L 100 242L 16 242L 16 158Z" fill="#E61919"/>
+					<g id="background">
+						<use xlink:href="#path1_fill" transform="translate(16 158)" fill="#4F4F4F"/>
+					</g>
+				</g>
+				<g id="Foreground" mask="url(#mask3_outline)">
+					<g id="mountains">
+						<g id="Vector">
+							<use xlink:href="#path2_fill" transform="translate(60.3159 198.494)" fill="#2864F0"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path3_fill" transform="translate(66.9842 198.494)" fill="#0053BF"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path4_fill" transform="translate(37.7778 192.149)" fill="#69A8FF"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path5_fill" transform="translate(51.8045 192.149)" fill="#3389FF"/>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path6_fill" transform="translate(44.9504 182.225)" fill="#E6F1FF"/>
+						</g>
+						<g id="Group">
+							<g id="Vector">
+								<use xlink:href="#path7_fill" transform="translate(51.8046 182.225)" fill="#BFE1FF"/>
+							</g>
+							<g id="Vector">
+								<use xlink:href="#path8_fill" transform="translate(62.1049 191.94)" fill="#BFE1FF"/>
+							</g>
+						</g>
+						<g id="Vector">
+							<use xlink:href="#path9_fill" transform="translate(66.9841 191.94)" fill="#A3D4FF"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<defs>
+		<path id="path0_fill" d="M 28 0C 6.22222 0 0 6.22222 0 28C 0 49.7778 6.23778 56 28 56C 49.7622 56 56 49.7778 56 28C 56 6.22222 49.7622 0 28 0Z"/>
+		<path id="path1_fill" fill-rule="evenodd" d="M 0 0L 84 0L 84 84L 0 84L 0 0Z"/>
+		<path id="path2_fill" d="M 16.9376 14.2166C 16.7054 14.5419 16.3568 14.7279 15.9619 14.7279L 4.34481 14.7279L -9.83555e-07 4.74917L 1.7891 1.09742e-06L 6.66817 1.09742e-06L 11.7564 0.0232504L 17.0307 13.1241C 17.1934 13.4959 17.1469 13.8912 16.9376 14.2166Z"/>
+		<path id="path3_fill" d="M 10.2694 14.2167C 10.0371 14.542 9.68857 14.7279 9.29361 14.7279L 1.32402e-07 14.7279L 1.32402e-07 5.48711e-07L 5.08825 0.0232498L 10.3625 13.1241C 10.5251 13.496 10.4787 13.8912 10.2694 14.2167Z"/>
+		<path id="path4_fill" d="M 27.8355 20.5617C 27.6265 20.8871 27.2778 21.073 26.8829 21.073L 1.17045 21.073C 0.775567 21.073 0.426935 20.8871 0.21791 20.5617C -0.0145112 20.2595 -0.061073 19.841 0.0785349 19.4925L 7.17266 1.51088L 11.2852 1.95248L 13.2833 0.278926C 13.4925 0.0929237 13.748 3.78422e-07 14.0269 3.78422e-07C 14.3057 3.78422e-07 14.5612 0.0929237 14.7704 0.278926L 16.7685 1.95248L 20.9584 1.51088L 27.9751 19.4925C 28.1145 19.841 28.0679 20.2596 27.8355 20.5617Z"/>
+		<path id="path5_fill" d="M 13.8088 20.5616C 13.5998 20.887 13.2511 21.0729 12.8562 21.0729L 2.36431e-07 21.0729L 2.36431e-07 -2.55435e-07C 0.278829 -2.55435e-07 0.534337 0.0929231 0.743517 0.278925L 2.74165 1.95248L 6.93158 1.51088L 13.9482 19.4925C 14.0878 19.841 14.0412 20.2595 13.8088 20.5616Z"/>
+		<path id="path6_fill" d="M 13.7856 11.4352L 10.3392 14.2939C 9.89775 14.6657 9.27037 14.6657 8.85224 14.2939L 6.85411 12.6204L 4.85598 14.2939C 4.6468 14.4799 4.3913 14.5729 4.11247 14.5729C 3.85688 14.5729 3.57813 14.4799 3.36895 14.2939L 9.93012e-08 11.4352L 0.882892 9.15741L 3.60122 2.23132C 4.13571 0.883198 5.41356 -2.36514e-07 6.85411 -2.36514e-07C 8.29466 -2.36514e-07 9.57244 0.883198 10.107 2.23132L 12.9028 9.15741L 13.7856 11.4352Z"/>
+		<path id="path7_fill" d="M 6.93151 11.4354L 3.48509 14.2941C 3.04364 14.6659 2.41625 14.6659 1.99813 14.2941L -3.97205e-07 12.6205L -3.97205e-07 -1.51369e-07C 1.44055 -1.51369e-07 2.71833 0.883199 3.2529 2.23132L 6.0487 9.15741L 6.93151 11.4354Z"/>
+		<path id="path8_fill" d="M 9.96748 6.57749L 5.62267 9.32009C 5.43673 9.43626 5.20446 9.50609 4.99528 9.50609C 4.94888 9.50609 4.92563 9.50609 4.87915 9.48284C 4.69321 9.48284 4.5306 9.41317 4.36806 9.32016L -1.70231e-07 6.55432L 0.859651 4.3464L 1.69606 2.208C 2.20715 0.883199 3.4386 5.2979e-07 4.87915 5.2979e-07L 4.90239 5.2979e-07C 4.92564 5.2979e-07 4.92563 5.2979e-07 4.92563 5.2979e-07C 6.36618 5.2979e-07 7.62072 0.836776 8.15513 2.16165L 9.08459 4.39282L 9.96748 6.57749Z"/>
+		<path id="path9_fill" d="M 5.08833 6.57764L 0.743517 9.32024C 0.55758 9.43641 0.325312 9.50624 0.116132 9.50624C 0.0697255 9.50624 0.0464839 9.50624 -4.16119e-07 9.48299L -4.16119e-07 -5.67632e-07L 0.0232431 -5.67632e-07C 0.0464853 -5.67632e-07 0.0464843 -5.67632e-07 0.0464843 -5.67632e-07C 1.48703 -5.67632e-07 2.74157 0.836775 3.27598 2.16165L 4.20543 4.39282L 5.08833 6.57764Z"/>
+		<path id="path10_fill" fill-rule="evenodd" d="M 0 0L 56 0L 56 56L 0 56L 0 0Z"/>
+		<path id="path11_fill" fill-rule="evenodd" d="M 0 9.5C 0 4.2533 4.25329 0 9.5 0L 46.5 0C 51.7467 0 56 4.25329 56 9.5L 56 46.5C 56 51.7467 51.7467 56 46.5 56L 9.5 56C 4.2533 56 0 51.7467 0 46.5L 0 9.5Z"/>
+		<path id="path12_fill" fill-rule="evenodd" d="M 0 28C 0 12.536 12.536 0 28 0L 28 0C 43.464 0 56 12.536 56 28L 56 28C 56 43.464 43.464 56 28 56L 28 56C 12.536 56 0 43.464 0 28L 0 28Z"/>
+	</defs>
+</svg>

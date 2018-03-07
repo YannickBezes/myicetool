@@ -1,0 +1,3 @@
+rootProject.name = 'myicetool'
+
+include ':app'
