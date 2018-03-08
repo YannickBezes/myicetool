@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, TextInput, TouchableOpacity, AsyncStorage } from 'react-native'
+import { Text, View, TextInput, TouchableOpacity, AsyncStorage, Alert } from 'react-native'
 import { StackNavigator } from 'react-navigation'
 
 import styles from '../styles/components/ComForm.style'
@@ -24,7 +24,7 @@ export default class ComForm extends Component {
     async publish() {
         let user = await AsyncStorage.getItem('user')
         user = JSON.parse(user)
-        fetch(`https://myicetool.bsy.ovh/api/cascades/${this.state.cascade.id}/comments`, {
+        fetch(`https://myicetool.bsy.ovh/api/cascades/${this.state.cascade.id}/commentaire`, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json',
@@ -34,7 +34,13 @@ export default class ComForm extends Component {
                 user_id: user.id
             })
         }).then(res => res.json())
-        .then(data => alert(JSON.stringify(data)))
+        .then(data => {
+            Alert.alert(
+                'Succès',
+                'Commentaire envoyé !'
+            )
+            this.props._handleButtonClick(data)
+        })
         .catch(e => alert(JSON.stringify(e)))
     }
 

@@ -2,8 +2,8 @@ import React, { Component} from 'react';
 import { View, Dimensions, ActivityIndicator, ScrollView, Text, Button } from 'react-native'
 import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
 
-import Commentaire from './Commentaire'
-import Descriptif from './Descriptif'
+import Commentaire from '../components/Commentaire'
+import Descriptif from '../components/Descriptif'
 
 import styles from '../styles/components/Result.style'
 
@@ -18,6 +18,7 @@ export default class Result extends Component {
         this.state = {
             status: this.props.navigation.state.params.status,
             cascade: this.props.navigation.state.params.cascade,
+            commentaires: this.props.navigation.state.params.cascade.commentaires,
             index: 0,
             routes: [
                 { key: 'details', title: 'Informations' },
@@ -26,8 +27,14 @@ export default class Result extends Component {
         }
     }
 
+    _handleButtonClick(commentaire) {
+        let { commentaires } = this.state
+        commentaires.push(commentaire)
+        this.setState({commentaires})
+      }
+
     get commentaires() {
-        const { commentaires } = this.state.cascade
+        const { commentaires } = this.state
         const items = commentaires && commentaires.length ?
             commentaires.map((commentaire, index) => {
                 return <Commentaire key={`commentaire=${index}`} {...commentaire}/>
@@ -47,7 +54,7 @@ export default class Result extends Component {
     }
 
     redirection() {
-        this.props.navigation.navigate('Profile', {cascade : this.state.cascade})
+        this.props.navigation.navigate('Commentaire', {cascade : this.state.cascade, _handleButtonClick: this._handleButtonClick.bind(this) })
     }
 
     get details() {
@@ -110,7 +117,6 @@ export default class Result extends Component {
         renderScene={this._renderScene}
         renderHeader={this._renderHeader}
         onIndexChange={this._handleIndexChange}
-        useNativeDriver
       />
     )
   }

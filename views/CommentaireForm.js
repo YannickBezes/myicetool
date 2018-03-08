@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Text, View, AsyncStorage } from 'react-native'
 
-import ComForm from './ComForm'
+import ComForm from '../components/ComForm'
 
 import styles from '../styles/components/Profile.style'
 
-export default class Profile extends Component {
+export default class CommentaireForm extends Component {
 
     static navigationOptions = {
         header: null
@@ -28,7 +28,7 @@ export default class Profile extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.text}>Edite ton commentaire</Text>
-                <ComForm navigation={this.props.navigation} cascade={this.state.cascade} />
+                <ComForm navigation={this.props.navigation} cascade={this.state.cascade} _handleButtonClick={this.props.navigation.state.params._handleButtonClick}/>
             </View>
         )
     }

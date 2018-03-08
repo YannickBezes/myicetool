@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 
-import AutocompleteInput from './Autocomplete'
+import AutocompleteInput from '../components/Autocomplete'
 
 import styles from '../styles/components/Search.style'
 import colors from '../styles/colors.style'
@@ -42,7 +42,7 @@ export default class Search extends React.Component{
                 <View style={styles.autocompleteContainer}>
                     <View style={styles.containerBrand}>
                         <Image
-                            source={require('./icons/logo_myicetool.png')}
+                            source={require('./logo_myicetool.png')}
                             style={styles.logo}
                         />
                         <Text style={styles.brand}>MyIceTool</Text>

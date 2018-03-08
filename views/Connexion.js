@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Image, Text, AsyncStorage } from 'react-native'
 
-import LoginForm from './LoginForm'
+import LoginForm from '../components/LoginForm'
 
 import styles from '../styles/components/Connexion.style'
 
@@ -21,7 +21,7 @@ export default class Connexion extends Component {
                 <View style={styles.logoContainer}>
                     <Image
                         style={styles.logo}
-                        source={require('./icons/octocat.png')}
+                        source={require('./octocat.png')}
                     />
                     <Text style={styles.title}>Connexion My Ice Tool</Text>
                 </View>
