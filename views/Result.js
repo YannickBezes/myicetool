@@ -18,7 +18,6 @@ export default class Result extends Component {
         this.state = {
             status: this.props.navigation.state.params.status,
             cascade: this.props.navigation.state.params.cascade,
-            commentaires: this.props.navigation.state.params.cascade.commentaires,
             index: 0,
             routes: [
                 { key: 'details', title: 'Informations' },
@@ -28,13 +27,13 @@ export default class Result extends Component {
     }
 
     _handleButtonClick(commentaire) {
-        let { commentaires } = this.state
-        commentaires.push(commentaire)
-        this.setState({commentaires})
+        let { cascade } = this.state
+        cascade.commentaires.push(commentaire)
+        this.setState({cascade})
       }
 
     get commentaires() {
-        const { commentaires } = this.state
+        const { commentaires } = this.state.cascade
         const items = commentaires && commentaires.length ?
             commentaires.map((commentaire, index) => {
                 return <Commentaire key={`commentaire=${index}`} {...commentaire}/>
