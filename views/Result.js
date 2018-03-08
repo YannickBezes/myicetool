@@ -30,7 +30,7 @@ export default class Result extends Component {
     _handleButtonClick(commentaire) {
         let { cascade } = this.state
         cascade.commentaires.push(commentaire)
-        this.setState({cascade})
+        this.setState({ cascade })
     }
 
     get commentaires() {
@@ -66,10 +66,16 @@ export default class Result extends Component {
 
     _renderHeader = props => <TabBar style={styles.tabBar} {...props} />
 
-    _renderScene =  SceneMap({
-        details: () => this.contentDetails,
-        commentaires: () => this.contentCommentaires,
-    })
+    _renderScene = ({ route }) => {
+        switch (route.key) {
+            case 'details':
+                return this.contentDetails;
+            case 'commentaires':
+                return this.contentCommentaires;
+            default:
+                return null;
+        }
+    }
 
     get contentDetails() {
         switch (this.state.status) {

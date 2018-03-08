@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, TextInput, TouchableOpacity, AsyncStorage, Alert } from 'react-native'
+import { Text, View, TextInput, TouchableOpacity, AsyncStorage, Alert, Keyboard } from 'react-native'
 import { StackNavigator } from 'react-navigation'
 
 import styles from '../styles/components/ComForm.style'
@@ -35,11 +35,9 @@ export default class ComForm extends Component {
             })
         }).then(res => res.json())
         .then(data => {
-            Alert.alert(
-                'Succès',
-                'Commentaire envoyé !'
-            )
+            Keyboard.dismiss()
             this.props._handleButtonClick(data)
+            this.props.navigation.goBack()
         })
         .catch(e => alert(JSON.stringify(e)))
     }
