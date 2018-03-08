@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import { View, Dimensions, ActivityIndicator, ScrollView, Text, Button } from 'react-native'
+import { TabNavigator } from 'react-navigation'
 import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
 
 import Commentaire from '../components/Commentaire'
@@ -30,7 +31,7 @@ export default class Result extends Component {
         let { cascade } = this.state
         cascade.commentaires.push(commentaire)
         this.setState({cascade})
-      }
+    }
 
     get commentaires() {
         const { commentaires } = this.state.cascade
