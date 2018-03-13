@@ -6,7 +6,7 @@ import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
 import Commentaire from '../components/Commentaire'
 import Descriptif from '../components/Descriptif'
 
-import styles from '../styles/components/Result.style'
+import styles from '../styles/views/Result.style'
 
 export default class Result extends Component {
 

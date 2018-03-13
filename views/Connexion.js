@@ -3,7 +3,7 @@ import { StyleSheet, View, Image, Text, AsyncStorage } from 'react-native'
 
 import LoginForm from '../components/LoginForm'
 
-import styles from '../styles/components/Connexion.style'
+import styles from '../styles/views/Connexion.style'
 
 export default class Connexion extends Component {
 

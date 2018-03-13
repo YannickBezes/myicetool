@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Image } from 'react-native'
 
 import AutocompleteInput from '../components/Autocomplete'
 
-import styles from '../styles/components/Search.style'
+import styles from '../styles/views/Search.style'
 import colors from '../styles/colors.style'
 
 export default class Search extends React.Component{

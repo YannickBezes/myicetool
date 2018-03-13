@@ -21,27 +21,6 @@ export default class ComForm extends Component {
         this.props.navigation.goBack()
     }
 
-    async publish() {
-        let user = await AsyncStorage.getItem('user')
-        user = JSON.parse(user)
-        fetch(`https://myicetool.bsy.ovh/api/cascades/${this.state.cascade.id}/commentaire`, {
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                contenu: this.state.commentaire,
-                user_id: user.id
-            })
-        }).then(res => res.json())
-        .then(data => {
-            Keyboard.dismiss()
-            this.props._handleButtonClick(data)
-            this.props.navigation.goBack()
-        })
-        .catch(e => alert(JSON.stringify(e)))
-    }
-
     render() {
         return(
             <View style={styles.container}>
@@ -57,7 +36,7 @@ export default class ComForm extends Component {
                 />
 
                 <View style={styles.containerBis}>
-                    <TouchableOpacity style={styles.buttonContainer} onPress={() => this.publish()}>
+                    <TouchableOpacity style={styles.buttonContainer} onPress={() => this.props._onSend(this.state.commentaire)}>
                         <Text style={styles.buttonText}>Publier</Text>
                     </TouchableOpacity>
 

@@ -4,7 +4,7 @@ import Camera from 'react-native-camera'
 
 import ComForm from '../components/ComForm'
 
-import styles from '../styles/components/Profile.style'
+import styles from '../styles/views/CommentaireForm.style'
 
 export default class CommentaireForm extends Component {
 
@@ -32,7 +32,7 @@ export default class CommentaireForm extends Component {
         })
     }
 
-    _onPressCamera () {
+    _toggleCamera() {
         Keyboard.dismiss();
         this.setState({ showCamera: !this.state.showCamera });
     }
@@ -48,7 +48,15 @@ export default class CommentaireForm extends Component {
         this.setState({ showCamera: false, pictures: [...this.state.pictures, picture.path] });
     }
 
-    _onSend () {
+    _removePicture (index) {
+        const newArray = this.state.pictures;
+        newArray.splice(index, 1);
+        this.setState({
+            pictures : newArray
+        });
+    }
+
+    _onSend(commentaire) {
         const data = new FormData();
 
         this.state.pictures.forEach((picture) => {
@@ -75,47 +83,69 @@ export default class CommentaireForm extends Component {
         if (!this.state.pictures.length) {
             return false;
         }
-        const pictures = this.state.pictures.map((picture, index) => {
+        const pics = this.state.pictures.map((picture, index) => {
             return (
-                <View style={styles.pictureContainer}>
-                    <Image source={{ uri: picture }} style={styles.picture} />
+                <View
+                  key={`picture-${index}`}
+                  style={styles.pictureContainer}
+                >
+                    <Image
+                      source={{ uri: picture }}
+                      style={styles.picture}
+                    />
+                    <TouchableOpacity
+                      onPress={() => this._removePicture(index)}
+                      style={styles.removePictureButton}
+                    >
+                        <Icon
+                          name={'md-close'}
+                          style={styles.removePictureIcon}
+                        />
+                    </TouchableOpacity>
                 </View>
             );
         });
         return (
             <View style={styles.picturesContainer}>
-                { pictures }
+                { pics }
             </View>
-        );
+        )
     }
 
-    get cameraView () {
-        if (!this.state.showCamera) {
-            return false;
-        }
+    get camera () {
+        if (!this.state.showCamera) return false
         return (
             <View style={styles.cameraView}>
                 <Camera
-                  ref={(c) => this._cameraRef = c}
+                  ref={(c) => this._camera = c}
                   style={styles.camera}
                   aspect={Camera.constants.Aspect.fill}
+                  orientation={'landscapeRight'}
                 >
                     <TouchableOpacity
                       style={styles.cameraButton}
                       onPress={this._takePicture}
                     >
-                        Prendre photo
+                        <Icon name={'md-camera'} style={styles.cameraIcon} />
                     </TouchableOpacity>
                 </Camera>
             </View>
-        );
+        )
     }
 
     render() {
         return (
             <View style={styles.container}>
                 <Text style={styles.text}>Edite ton commentaire</Text>
-                <ComForm navigation={this.props.navigation} cascade={this.state.cascade} _handleButtonClick={this.props.navigation.state.params._handleButtonClick} />
+                <ComForm
+                    navigation={this.props.navigation}
+                    cascade={this.state.cascade}
+                    _handleButtonClick={this.props.navigation.state.params._handleButtonClick}
+                    send={this._onSend}
+                />
+                <TouchableOpacity onPress={this._toggleCamera}>
+                        Camera
+                </TouchableOpacity>
                 { this.cameraView }
             </View>
         )
