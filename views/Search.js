@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { View, Text, TouchableOpacity, Image, ImageBackground } from 'react-native'
 
 import AutocompleteInput from '../components/Autocomplete'
 
@@ -38,13 +38,11 @@ export default class Search extends React.Component{
 
     render(){
         return(
-            <View style={styles.containerbis}>
-                <View style={styles.autocompleteContainer}>
+            <ImageBackground 
+            source={require('./theme.jpg')}
+            style={styles.containerbis}>
+                 <View style={styles.container}>
                     <View style={styles.containerBrand}>
-                        <Image
-                            source={require('./logo_myicetool.png')}
-                            style={styles.logo}
-                        />
                         <Text style={styles.brand}>MyIceTool</Text>
                     </View>    
                     <AutocompleteInput updateState={ this.setCascade }/>
@@ -52,8 +50,8 @@ export default class Search extends React.Component{
                     <TouchableOpacity style={styles.btnSearch} onPress={() => this.submit()}>
                         <Text style={styles.textBtn}>Rechercher</Text>
                     </TouchableOpacity>
-                </View>
-            </View>
+                </View> 
+            </ImageBackground>
         );
     }
 }

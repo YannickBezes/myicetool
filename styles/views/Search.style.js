@@ -3,15 +3,12 @@ import colors from '../colors.style'
 
 export default StyleSheet.create({
     containerbis: {
-        margin: 20
+        flex: 1
     },
-    autocompleteContainer: {
+    container: {
+        margin: 20,
         flex: 1,
-        left: 0,
-        position: 'absolute',
-        right: 0,
-        top: 0,
-        zIndex: 1
+        zIndex: 1,
     },
     btnSearch: {
         marginTop: 10,
@@ -28,7 +25,8 @@ export default StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 20
+        marginBottom: 20,
+        backgroundColor: 'transparent'
     },
     logo: {
         margin: 10,
