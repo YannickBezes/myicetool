@@ -7,17 +7,24 @@ export default class Commentaire extends Component {
 
     constructor(props) {
         super(props)
-        this.state = { username: ''}
+        this.state = { username: '', photos: []}
     }
 
     componentDidMount() {
         this.user()
+        this.photos()
     }
 
     async user() {
         const RES = await fetch(`https://myicetool.bsy.ovh/api/commentaires/${this.props.id}/user`)
         let user = await RES.json()
         this.setState({ username: user.nom })
+    }
+
+    async photos() {
+        const RES = await fetch(`https://myicetool.bsy.ovh/api/commentaires/${this.props.id}/photos`)
+        let photos = await RES.json()
+        this.setState({ photos })
     }
 
     get listcom() {
@@ -33,18 +40,30 @@ export default class Commentaire extends Component {
     }
 
     render() {
-        return(
-            <View style={styles.commentaireContainer}>
-                <View style={styles.avatarContainer}>
-                    <Image
-                        source={require('./icons/moutain.png')}
-                        style={styles.image}
-                    />
+        const { photos } = this.state
+
+        if(photos.length > 0) {
+            return(
+                <View style={styles.commentaireContainer}>
+                    <View style={styles.avatarContainer}>
+                        <Image
+                            source={{uri: photos[0].url}}
+                            style={styles.image}
+                        />
+                    </View>
+                    <View style={styles.contentContainer}>
+                        {this.listcom}
+                    </View>
                 </View>
-                <View style={styles.contentContainer}>
-                    {this.listcom}
+            )
+        } else {
+            return(
+                <View style={styles.commentaireContainer}>
+                    <View style={styles.contentContainer}>
+                        {this.listcom}
+                    </View>
                 </View>
-            </View>
-        )
+            )
+        }  
     }
 }

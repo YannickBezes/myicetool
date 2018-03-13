@@ -74,10 +74,20 @@ export default class CommentaireForm extends Component {
                 method: 'POST',
                 body: data
             })
+            .then(() => {
+                this.detailsCascade(comments)
+            })
             .catch( err => {
                 console.warn("Impossible d'envoyer le tweet : " + err);
             })
         })
+    }
+
+    async detailsCascade(comments) {
+        const RES = await fetch(`https://myicetool.bsy.ovh/api/commentaires/${comments.id}/details`)
+        let cascade = await RES.json()
+        this.props.navigation.state.params._handleButtonClick(cascade)
+        this.props.navigation.goBack()
     }
 
     get pictures () {
@@ -120,7 +130,6 @@ export default class CommentaireForm extends Component {
                   ref={(c) => this._camera = c}
                   style={styles.camera}
                   aspect={Camera.constants.Aspect.fill}
-                  orientation={'landscapeRight'}
                 >
                     <TouchableOpacity
                       style={styles.cameraButton}
@@ -139,7 +148,7 @@ export default class CommentaireForm extends Component {
             <View style={styles.container}>
                 <Text style={styles.text}>Edite ton commentaire</Text>
                 { this.camera }
-                <ComForm navigation={this.props.navigation} cascade={this.state.cascade} _handleButtonClick={this.props.navigation.state.params._handleButtonClick} send={this._onSendTweet.bind(this)} />
+                <ComForm navigation={this.props.navigation} cascade={this.state.cascade} send={this._onSendTweet.bind(this)} />
                 { this.pictures }
                 <TouchableOpacity onPress={this._toggleCamera}>
                     <Text>Prendre photo</Text>
