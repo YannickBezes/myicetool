@@ -37,6 +37,7 @@ export default class ComForm extends Component {
         .then(data => {
             Keyboard.dismiss()
             this.props._handleButtonClick(data)
+            this.props.send(data)
             this.props.navigation.goBack()
         })
         .catch(e => alert(JSON.stringify(e)))

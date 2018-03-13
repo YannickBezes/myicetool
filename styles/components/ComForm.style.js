@@ -3,14 +3,14 @@ import colors from '../colors.style'
 
 export default StyleSheet.create({
     container: {
-        padding: 20
+        margin: 20
     },
     containerBis: {
-        flex: 1
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row'
     },
     input: {
-        height: 150,
-        width: 400,
         backgroundColor: 'rgba(255,255,255,0.2)',
         margin: 20,
         color: '#FFFFFF',
@@ -31,10 +31,5 @@ export default StyleSheet.create({
         textAlign: 'center',
         color: '#FFFFFF',
         fontWeight: '700'
-    },
-    containerBis: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'row'
     }
 })
