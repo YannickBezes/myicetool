@@ -39,13 +39,13 @@ export default class Search extends React.Component{
     render(){
         return(
             <ImageBackground 
-            source={require('./theme.jpg')}
+            source={require('./background-3.jpg')}
             style={styles.containerbis}>
                  <View style={styles.container}>
                     <View style={styles.containerBrand}>
                         <Text style={styles.brand}>MyIceTool</Text>
-                    </View>    
-                    <AutocompleteInput updateState={ this.setCascade }/>
+                    </View>
+                    <AutocompleteInput updateState={this.setCascade}/>
                 
                     <TouchableOpacity style={styles.btnSearch} onPress={() => this.submit()}>
                         <Text style={styles.textBtn}>Rechercher</Text>
