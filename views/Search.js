@@ -39,7 +39,7 @@ export default class Search extends React.Component{
     render(){
         return(
             <ImageBackground 
-            source={require('./background-3.jpg')}
+            source={require('./img/background.jpg')}
             style={styles.containerbis}>
                  <View style={styles.container}>
                     <View style={styles.containerBrand}>

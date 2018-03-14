@@ -21,7 +21,7 @@ export default class Connexion extends Component {
                 <View style={styles.logoContainer}>
                     <Image
                         style={styles.logo}
-                        source={require('./octocat.png')}
+                        source={require('./img/octocat.png')}
                     />
                     <Text style={styles.title}>Connexion My Ice Tool</Text>
                 </View>
