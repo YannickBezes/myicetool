@@ -4,12 +4,12 @@ import colors from '../colors.style'
 export default StyleSheet.create({
     content: {
         flex: 1,
-        backgroundColor: colors.backgroundLightColor,
+        backgroundColor: '#f5f8fa',
         padding: 10
     },
     textColor: {
-        color: 'white',
-        fontSize: 20,
+        color: '#777',
+        fontSize: 17,
         marginBottom: 5
     },
     strong: {

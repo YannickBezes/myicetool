@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Image, Text, AsyncStorage } from 'react-native'
+import { StyleSheet, View, Image, Text, AsyncStorage, ImageBackground } from 'react-native'
 
 import LoginForm from '../components/LoginForm'
 
@@ -17,18 +17,22 @@ export default class Connexion extends Component {
 
     render() {
         return(
-            <View style={styles.container}>
-                <View style={styles.logoContainer}>
-                    <Image
-                        style={styles.logo}
-                        source={require('./img/octocat.png')}
-                    />
-                    <Text style={styles.title}>Connexion My Ice Tool</Text>
+            <ImageBackground 
+            source={require('./img/background.jpg')}
+            style={styles.containerbis}
+            >
+                <View style={styles.container}>
+                    <View style={styles.logoContainer}>
+                        <Image
+                            style={styles.logo}
+                            source={require('./img/logo.png')}
+                        />
+                    </View>
+                    <View style={styles.formContainer}>
+                        <LoginForm navigation={this.props.navigation}/>
+                    </View>
                 </View>
-                <View style={styles.formContainer}>
-                    <LoginForm navigation={this.props.navigation}/>
-                </View>
-            </View>
+            </ImageBackground>
         )
     }
 }

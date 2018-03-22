@@ -10,14 +10,30 @@ export default StyleSheet.create({
     container: {
         flex : 1
     },
-    btnAvis: {
-        margin: 20,
-        color: colors.primary
+    btnComments: {
+        padding:10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fa5c62'
+    },
+    btnCommentsText: {
+        color: 'white',
+        fontSize: 16
     },
     label: {
-        color: 'white'
+        color: '#000'
     },
     tabBar: {
-        backgroundColor: colors.primaryDarkColor
+        backgroundColor: '#85d1e3'
+    },
+    tabBarLabel: {
+        fontSize: 18
+    },
+    tabBarIndicator: {
+        backgroundColor: colors.primaryTextColor
+    },
+    containerComments: {
+        flex:1,
+        flexDirection: 'column-reverse'
     }
 })

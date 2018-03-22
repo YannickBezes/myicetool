@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import { View, Dimensions, ActivityIndicator, ScrollView, Text, Button } from 'react-native'
+import { View, Dimensions, ActivityIndicator, ScrollView, Text, Button, TouchableOpacity } from 'react-native'
 import { TabNavigator } from 'react-navigation'
 import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
 
@@ -40,12 +40,15 @@ export default class Result extends Component {
                 return <Commentaire key={`commentaire=${index}`} {...commentaire}/>
             }) : false
         return (
-            <View>
-                <Button
-                    style={styles.btnAvis}
+            <View style={styles.containerComments}>
+                <TouchableOpacity
+                    style={styles.btnComments}
                     onPress={() => this.redirection()}
-                    title="Ecris un commentaire sur cette cascade "
-                />
+                    
+                >
+                    <Text style={styles.btnCommentsText}>Laisser un commentaire</Text>
+                </TouchableOpacity>
+
                 <ScrollView>
                     { items }
                 </ScrollView>
@@ -64,7 +67,7 @@ export default class Result extends Component {
 
     _handleIndexChange = index => this.setState({ index })
 
-    _renderHeader = props => <TabBar style={styles.tabBar} {...props} />
+    _renderHeader = props => <TabBar style={styles.tabBar} labelStyle={styles.tabBarLabel} indicatorStyle={styles.tabBarIndicator} {...props} />
 
     _renderScene = ({ route }) => {
         switch (route.key) {
@@ -110,7 +113,7 @@ export default class Result extends Component {
     get error() {
         return (
             <View style={styles.labelContainer}>
-                <Text style={styles.label}>La cascade recherché n'existe pas ! </Text>
+                <Text style={styles.label}>La cascade recherchée n'existe pas ! </Text>
             </View>
         )
     }

@@ -61,7 +61,7 @@ export default class CommentaireForm extends Component {
         this.setState({pictures : newArray})
     }
 
-    _onSendTweet (comments) {
+    _onSend (comments) {
         const data = new FormData();
         this.state.pictures.forEach((picture) => {
             data.append('photo', {
@@ -78,7 +78,7 @@ export default class CommentaireForm extends Component {
                 this.detailsCascade(comments)
             })
             .catch( err => {
-                console.warn("Impossible d'envoyer le tweet : " + err);
+                console.warn("Impossible d'envoyer la photo : " + err);
             })
         })
     }
@@ -108,11 +108,11 @@ export default class CommentaireForm extends Component {
                       onPress={() => this._removePicture(index)}
                       style={styles.removePictureButton}
                     >
-                        <Text>Remove</Text>
+                        <Image source={require('./img/close.png')} style={styles.removePictureIcon}/>
                     </TouchableOpacity>
                 </View>
-            );
-        });
+            )
+        })
         return (
             <View style={styles.picturesContainer}>
                 { pics }
@@ -135,7 +135,7 @@ export default class CommentaireForm extends Component {
                       style={styles.cameraButton}
                       onPress={this._takePicture}
                     >
-                        <Text>Prendre photo</Text>
+                        <Image source={require('./img/camera.png')} style={styles.cameraIcon}/>
                     </TouchableOpacity>
                 </Camera>
             </View>
@@ -144,16 +144,26 @@ export default class CommentaireForm extends Component {
 
 
     render() {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.text}>Edite ton commentaire</Text>
-                { this.camera }
-                <ComForm navigation={this.props.navigation} cascade={this.state.cascade} send={this._onSendTweet.bind(this)} />
-                { this.pictures }
-                <TouchableOpacity onPress={this._toggleCamera}>
-                    <Text>Prendre photo</Text>
-                </TouchableOpacity>
-            </View>
-        )
+        if(this.state.pictures.length) {
+            return(
+                <View style={styles.container}>
+                    { this.camera }
+                    <ComForm navigation={this.props.navigation} cascade={this.state.cascade} send={this._onSend.bind(this)} />
+                    { this.pictures }
+                </View>
+            )
+        }
+        else {
+            return (
+                <View style={styles.container}>
+                    { this.camera }
+                    <ComForm navigation={this.props.navigation} cascade={this.state.cascade} send={this._onSend.bind(this)} />
+    
+                    <TouchableOpacity onPress={this._toggleCamera}>
+                        <Text style={styles.textTakePicture}>Prendre une photo</Text>
+                    </TouchableOpacity>
+                </View>
+            )
+        }
     }
 }

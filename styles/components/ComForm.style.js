@@ -11,11 +11,12 @@ export default StyleSheet.create({
         flexDirection: 'row'
     },
     input: {
-        backgroundColor: 'rgba(255,255,255,0.2)',
+        backgroundColor: '#d5d5d5',
         margin: 20,
-        color: '#FFFFFF',
+        color: '#000',
         padding: 10,
-        borderRadius: 10
+        borderRadius: 10,
+        fontSize: 16
     },
 
     buttonContainer: {
@@ -23,13 +24,14 @@ export default StyleSheet.create({
         alignItems: 'center',
         width: 180,
         height: 50,
-        backgroundColor: '#2980b9',
+        backgroundColor: '#85d1e3',
         margin: 10,
         borderRadius: 10
     },
     buttonText: {
         textAlign: 'center',
         color: '#FFFFFF',
-        fontWeight: '700'
+        fontWeight: '700',
+        fontSize: 18
     }
 })

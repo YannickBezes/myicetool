@@ -37,10 +37,12 @@ export default class AutocompleteInput extends Component {
 		
 		return (
 			<Autocomplete
+				containerStyle={{width: 350, zIndex: 1}}
         		onChangeText={nom => this.getCascades(nom)}
 				defaultValue={nom}
 		  		data={cascades}
 				underlineColorAndroid='transparent'
+				placeholder={'Trouver une cascade'}
           		renderItem={cascade => 
             		<TouchableOpacity onPress={() => this._onClick(cascade)}>
               			<Text>{cascade.nom}</Text>

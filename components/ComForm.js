@@ -46,8 +46,8 @@ export default class ComForm extends Component {
             <View style={styles.container}>
                 <TextInput style={styles.input}
                     multiline={true}
-                    numberOfLines={8}
-                    placeholderTextColor="rgba(255,255,255,0.7)"
+                    numberOfLines={6}
+                    placeholderTextColor="#000"
                     placeholder="Votre commentaire"
                     returnKeyType="go"
                     onChangeText={ commentaire =>this.setState({commentaire})}

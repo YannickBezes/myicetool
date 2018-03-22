@@ -41,15 +41,14 @@ export default class Search extends React.Component{
             <ImageBackground 
             source={require('./img/background.jpg')}
             style={styles.containerbis}>
-                 <View style={styles.container}>
+                <View style={styles.container}>
                     <View style={styles.containerBrand}>
-                        <Text style={styles.brand}>MyIceTool</Text>
+                        <Image source={require('./img/logo.png')} style={styles.brand}/>
                     </View>
-                    <AutocompleteInput updateState={this.setCascade}/>
-                
+                    <AutocompleteInput updateState={this.setCascade} style={styles.autocomplete}/>
                     <TouchableOpacity style={styles.btnSearch} onPress={() => this.submit()}>
                         <Text style={styles.textBtn}>Rechercher</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity>                
                 </View> 
             </ImageBackground>
         );

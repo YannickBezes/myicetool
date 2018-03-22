@@ -2,9 +2,11 @@ import { StyleSheet } from 'react-native'
 import colors from '../colors.style'
 
 export default StyleSheet.create({
+    containerbis: {
+        flex: 1
+    },
     container: {
         flex : 1,
-        backgroundColor:'#465F7F'
     },
     logoContainer:{
         alignItems:'center',
@@ -13,17 +15,16 @@ export default StyleSheet.create({
     }
     ,
     logo: {
-        width: 200,
-        height: 200
+        width: 300,
+        height: 80
     },
     title:{
-        color: '#FFF',
+        color: '#000',
         fontSize: 22,
         marginTop: 10
 
     },
     formContainer: {
-       
         justifyContent: 'center',
         paddingBottom:150
     }

@@ -27,43 +27,50 @@ export default class Commentaire extends Component {
         this.setState({ photos })
     }
 
+
     get listcom() {
-        const { libelle , date } = this.props
+        const { libelle , date, photos } = this.props
         let { username } = this.state
-        return(
-            <View style={styles.usernameContainer}>
-                <Text style={styles.username}>@{ username }</Text>
-                <Text style={styles.commentaireDate}>{date}</Text>
-                <Text style={styles.libelle}>{libelle}</Text>
-            </View>
-        )
-    }
-
-    render() {
-        const { photos } = this.state
-
         if(photos.length > 0) {
             return(
-                <View style={styles.commentaireContainer}>
-                    <View style={styles.avatarContainer}>
-                        <Image
+                <View style={styles.comments}>
+                    <View style={styles.containerUserDate}>
+                        <Text style={styles.username}>@{ username }</Text>
+                        <Text style={styles.commentaireDate}>{date}</Text>
+                    </View>
+                    <Text style={styles.libelle}>{libelle}</Text>
+                    <Image
                             source={{uri: photos[0].url}}
                             style={styles.image}
                         />
-                    </View>
-                    <View style={styles.contentContainer}>
-                        {this.listcom}
-                    </View>
                 </View>
             )
         } else {
             return(
-                <View style={styles.commentaireContainer}>
-                    <View style={styles.contentContainer}>
-                        {this.listcom}
+                <View style={styles.comments}>
+                    <View style={styles.containerUserDate}>
+                        <Text style={styles.username}>@{ username }</Text>
+                        <Text style={styles.commentaireDate}>{date}</Text>
                     </View>
+                    <Text style={styles.libelle}>{libelle}</Text>
                 </View>
             )
-        }  
+        }
+    }
+
+    render() {
+        return(
+            <View style={styles.commentaireContainer}>
+                <View style={styles.avatarContainer}>
+                <Image
+                        source={require('./icons/user.png')}
+                        style={styles.avatar}
+                    />
+                </View>
+                <View style={styles.contentContainer}>
+                    {this.listcom}
+                </View>
+            </View>
+        ) 
     }
 }

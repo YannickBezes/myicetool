@@ -8,14 +8,14 @@ export default StyleSheet.create({
     container: {
         margin: 20,
         flex: 1,
-        zIndex: 1,
+        alignItems: 'center'
     },
     btnSearch: {
-        marginTop: 10,
-        backgroundColor: colors.primary,
+        backgroundColor: '#85d1e3',
         padding: 10,
         alignItems: 'center',
-        justifyContent: 'center'
+        width: 300,
+        borderRadius: 20
     },
     textBtn: {
         color: colors.primaryTextColor,
@@ -28,12 +28,8 @@ export default StyleSheet.create({
         marginBottom: 20,
         backgroundColor: 'transparent'
     },
-    logo: {
-        margin: 10,
-    },
     brand: {
-        color: 'black',
-        fontSize: 17,
-        fontWeight: '700',
+        width: 300,
+        height: 80
     },
 })
