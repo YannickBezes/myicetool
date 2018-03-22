@@ -62,25 +62,30 @@ export default class CommentaireForm extends Component {
     }
 
     _onSend (comments) {
-        const data = new FormData();
-        this.state.pictures.forEach((picture) => {
-            data.append('photo', {
-                uri: picture,
-                type: 'image/jpeg', // or photo.type
-                name: 'photo.jpg'
+        const { pictures } = this.state
+        if(pictures.length) {
+            const data = new FormData();
+            pictures.forEach((picture) => {
+                data.append('photo', {
+                    uri: picture,
+                    type: 'image/jpeg', // or photo.type
+                    name: 'photo.jpg'
+                })
+    
+                fetch(`https://myicetool.bsy.ovh/api/commentaires/${comments.id}/photo`, {
+                    method: 'POST',
+                    body: data
+                })
+                .then(() => {
+                    this.detailsCascade(comments)
+                })
+                .catch( err => {
+                    console.warn("Impossible d'envoyer la photo : " + err);
+                })
             })
-
-            fetch(`https://myicetool.bsy.ovh/api/commentaires/${comments.id}/photo`, {
-                method: 'POST',
-                body: data
-            })
-            .then(() => {
-                this.detailsCascade(comments)
-            })
-            .catch( err => {
-                console.warn("Impossible d'envoyer la photo : " + err);
-            })
-        })
+        } else {
+            this.detailsCascade(comments)
+        }
     }
 
     async detailsCascade(comments) {
