@@ -15,14 +15,13 @@ export default StyleSheet.create({
     cameraView: {
         width: 350,
         height: 400,
-        backgroundColor: 'red',
-        transform: [{ rotate: '-90deg'}]
+        // transform: [{ rotate: '-90deg'}]
     },
     camera: {
         flex: 1,
         flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'flex-start'
+        alignItems: 'flex-end',
+        justifyContent: 'center',
     },
     cameraButton: {
         alignItems: 'center',
@@ -32,11 +31,12 @@ export default StyleSheet.create({
         borderRadius: 50,
         width: 50,
         height: 50,
+        marginBottom: 10
     },
     cameraIcon: {
         width: 35,
         height: 35,
-        transform: [{ rotate: '90deg'}]
+        // transform: [{ rotate: '90deg'}]
     },
     picturesContainer: {
         flexDirection: 'row',
@@ -46,15 +46,15 @@ export default StyleSheet.create({
         width: '25%',
         height: 100,
         padding: 10,
-        transform: [{ rotate: '-90deg'}]
+        // transform: [{ rotate: '-90deg'}]
     },
     picture: {
         ...StyleSheet.absoluteFillObject
     },
     removePictureButton: {
         position: 'absolute',
+        top: 5,
         right: 5,
-        bottom: 5,
     },
     removePictureIcon: {
         width: 15,
